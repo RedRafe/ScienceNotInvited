@@ -53,8 +53,9 @@ local function rescaledValue(ingredients)
   return total
 end
 
-local function coefficient(ingredients)
-  return math.floor(defaultValue(ingredients) / rescaledValue(filterIngredients(ingredients)))
+local function coefficient(ingredients, count)
+  count = count or 1
+  return math.floor(count * defaultValue(ingredients) / rescaledValue(filterIngredients(ingredients)) + 0.5)
 end
 
 local function rescaleIngredients(ingredients)
@@ -75,7 +76,7 @@ for _, tech in pairs(data.raw.technology) do
   if unit.count ~= nil then
     data.raw.technology[tech.name].unit = {
       ingredients = rescaleIngredients(unit.ingredients),
-      count = unit.count * coefficient(unit.ingredients),
+      count = coefficient(unit.ingredients, unit.count),
       time = unit.time
     }
   else
