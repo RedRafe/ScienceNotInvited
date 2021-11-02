@@ -1,58 +1,79 @@
 data:extend({
+  --- Vanilla settings
   {
     type          = "bool-setting",
-    name          = "science-1", -- Red Science, must be enabled
+    name          = "automation-science-pack", -- Red Science, must be enabled
     hidden        = true,
     default_value = true,
     forced_value  = true,
-    setting_type  = "startup"
+    setting_type  = "startup",
+    order         = "AA-AA-S1"
   },
   {
     type          = "bool-setting",
-    name          = "science-2", -- Green Science
+    name          = "logistic-science-pack", -- Green Science
     hidden        = false,
     default_value = true,
     forced_value  = true,
-    setting_type  = "startup"
+    setting_type  = "startup",
+    order         = "AA-AA-S2"
   },
   {
     type          = "bool-setting",
-    name          = "science-3", -- Black Science
+    name          = "military-science-pack", -- Black Science
     hidden        = false,
     default_value = true,
     forced_value  = true,
-    setting_type  = "startup"
+    setting_type  = "startup",
+    order         = "AA-AA-S3"
   },
   {
     type          = "bool-setting",
-    name          = "science-4", -- Blue Science
+    name          = "chemical-science-pack", -- Blue Science
     hidden        = false,
     default_value = true,
     forced_value  = true,
-    setting_type  = "startup"
+    setting_type  = "startup",
+    order         = "AA-AA-S4"
   },
   {
     type          = "bool-setting",
-    name          = "science-5", -- Purple Science
+    name          = "production-science-pack", -- Purple Science
     hidden        = false,
     default_value = true,
     forced_value  = true,
-    setting_type  = "startup"
+    setting_type  = "startup",
+    order         = "AA-AA-S5"
   },
   {
     type          = "bool-setting",
-    name          = "science-6", -- Yellow Science
+    name          = "utility-science-pack", -- Yellow Science
     hidden        = false,
     default_value = true,
     forced_value  = true,
-    setting_type  = "startup"
+    setting_type  = "startup",
+    order         = "AA-AA-S6"
   },
   {
     type          = "bool-setting",
-    name          = "science-7", -- White Science
+    name          = "space-science-pack", -- White Science
     hidden        = false,
     default_value = true,
     forced_value  = true,
-    setting_type  = "startup"
+    setting_type  = "startup",
+    order         = "AA-AA-S7"
   }
 })
+
+-- -- -- Compatibility settings
+path_compatibility_scripts = "__science-not-invited__/" .. "compatibility/"
+
+-- -- Space Exploration
+if mods['space-exploration'] then
+  require(path_compatibility_scripts .. "space-exploration/settings")
+end
+
+-- -- Bob's
+if mods['bobmodules'] or mods['bobtech'] then
+  require(path_compatibility_scripts .. "Bobs/settings")
+end

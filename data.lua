@@ -2,14 +2,14 @@
 -- -- -- PRE INITIALIZATION
 ---------------------------------------------------------------------------
 -- General Info
-mod                               = {} 
-mod.internal_name                 = "science-not-invited"
-mod.title_name                    = "Science Not Invited"
-mod.version                       = mods[mod.internal_name]
-mod.stage                         = "data"
+sni                               = {} 
+sni.internal_name                 = "science-not-invited"
+sni.title_name                    = "Science Not Invited"
+sni.version                       = mods[sni.internal_name]
+sni.stage                         = "data"
 
 -- -- Global Mod paths
-require("__" .. mod.internal_name .. "__/lib/public/paths")
+require("__" .. sni.internal_name .. "__/lib/public/paths")
 
 ---------------------------------------------------------------------------
 -- -- -- CONTENTS INITIALIZATION (data stage)

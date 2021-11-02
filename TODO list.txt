@@ -1,3 +1,0 @@
-[] Add compatibility with big/overhaul mods
-[] Enable/Disable rescale feature
-[] Ideas to disable red science (still mandatory)

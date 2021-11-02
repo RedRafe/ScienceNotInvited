@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 02.11.2021
+  Features:
+    - Added compatibility with Space Exploration
+    - Added compatibility with Bob's mod
+  Changes:
+    - Changed rescaling formula behaviour
+    - Changed weights for vanilla
+  Bugfixes:
+    - Fixed rescaling formula overflow
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 30.10.2021
-  - Release
+  Info:
+    - Release
