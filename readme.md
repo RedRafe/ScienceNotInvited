@@ -11,7 +11,12 @@ Available languages:
 You can help by translating this mod into your language. Any translations made will be included in the next release.
 
 ### Known Bugs & Mod compatibility
-Please feel free to report any known issue! :) 
+Please feel free to report any known issue! :)
+
+Until now, compatibility has been extended to:
+- Space Exploration
+- Bob's Modpack
+
 Science Not Included is developed for vanilla games and should be compatible with all mods that do not introduce changes in the technology tree. Requests for compatibility with overhaul mods can be submitted of course! :)
 
 ### Future developments
