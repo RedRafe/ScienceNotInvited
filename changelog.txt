@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 05.11.2021
+  Changes:
+    - Science Not Invited by default can now recognize technologies that haven't already been made
+      compatible and set default values for it so the game won't crash at loading or in game
+  Bugfixes:
+    - Maximum units for tech are now capped au int64 instead of double
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 02.11.2021
   Features:
