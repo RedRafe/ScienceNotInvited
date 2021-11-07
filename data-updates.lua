@@ -29,3 +29,10 @@ if mods['bobmodules'] or mods['bobtech'] then
   SNI.setWeights(Bobs.weights)
   SNI.setValues(Bobs.values)
 end
+
+-- -- Bob's + Angel's
+if mods['bobtech'] and mods['angelsrefining'] then
+  BobsAngels = require(path_c_bobsangels .. "data")
+
+  SNI.setValues(BobsAngels.values)
+end
