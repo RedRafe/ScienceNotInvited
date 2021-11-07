@@ -14,12 +14,14 @@ You can help by translating this mod into your language. Any translations made w
 Please feel free to report any known issue! :)
 
 Until now, compatibility has been extended to:
+- Angel's mod pack
+- Bob's mod pack
+- Krastorio2
 - Space Exploration
-- Bob's Modpack
 
 Science Not Included is developed for vanilla games and should be compatible with all mods that do not introduce changes in the technology tree. Requests for compatibility with overhaul mods can be submitted of course! :)
 
 ### Future developments
-- [] Add compatibility with big/overhaul mods
+- [] Add compatibility with other big/overhaul mods
 - [] Enable/Disable rescale feature
-- [] Ideas to disable red science (still mandatory)
+- [x] Ideas to disable red science (still mandatory)
