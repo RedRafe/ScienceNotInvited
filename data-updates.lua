@@ -14,6 +14,14 @@ end
 if mods["Krastorio2"] then
 end
 
+-- -- Angel's
+if mods['angelsbioprocessing'] then
+  Angels = require(path_c_angels .. "data")
+
+  SNI.setWeights(Angels.weights)
+  SNI.setValues(Angels.values)
+end
+
 -- -- Bob's
 if mods['bobmodules'] or mods['bobtech'] then
   Bobs = require(path_c_bobs .. "data")

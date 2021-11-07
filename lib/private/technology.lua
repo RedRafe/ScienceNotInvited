@@ -15,9 +15,29 @@ local MAX_DOUBLE     = 0x1.FFFFFFFFFFFFFP+1023
 --                        Helper Functions                               --
 ---------------------------------------------------------------------------
 
+-- @ ingredient: Prototype/Inredient
+local function safeIngredientName(ingredient)
+  if ingredient[1] ~= nil then return ingredient[1] end
+  if ingredient.name ~= nil then return ingredient.name end
+  if tostring(ingredient) ~= nil then return tostring(ingredient) end
+  if ingredient ~= nil then return ingredient end
+  log("[Compatibility coverage]: fatal error")
+end
+
+-- @ ingredient: Prototype/Inredient
+local function safeIngredientAmount(ingredient)
+  if ingredient[2] ~= nil then return ingredient[2] end
+  if ingredient.amount ~= nil then return ingredient.amount end
+  if tonumber(ingredient) ~= nil then return tonumber(ingredient) end
+  if ingredient ~= nil then return ingredient end
+  log("[Compatibility coverage]: fatal error")
+end
+
 -- return any value associated to a key
 -- @ sciencePack: String
 local function safeValue(sciencePack)
+  log(sciencePack)
+  sciencePack = safeIngredientName(sciencePack)
   if SNI.values[sciencePack] ~= nil then 
     return SNI.values[sciencePack]
   else 
@@ -30,6 +50,8 @@ end
 -- Return any weight associated to a key
 -- @ sciencePack: String
 local function safeWeight(sciencePack)
+  log(sciencePack)
+  sciencePack = safeIngredientName(sciencePack)
   if SNI.weights[sciencePack] ~= nil then 
     return SNI.weights[sciencePack]
   else
@@ -61,8 +83,10 @@ end
 local function filterIngredients(ingredients)
   local filteredIngredients = {}
   for _, v in pairs(ingredients) do
-    if safeWeight(v[1]) == 1 then
-      table.insert(filteredIngredients, {v[1], v[2]})
+    local name = safeIngredientName(v)
+    local amount = safeIngredientAmount(v)
+    if safeWeight(name) == 1 then
+      table.insert(filteredIngredients, {name, amount})
     end
   end
   if #filteredIngredients == 0 then
@@ -76,7 +100,9 @@ end
 local function defaultValue(ingredients)
   local total = 0
   for _, v in pairs(ingredients) do
-    total = total + safeValue(v[1]) * v[2]
+    local name = safeIngredientName(v)
+    local amount = safeIngredientAmount(v)
+    total = total + safeValue(name) * amount
   end
   return total
 end
@@ -86,7 +112,9 @@ end
 local function rescaledValue(ingredients)
   local total = 0
   for _, v in pairs(ingredients) do
-    total = total + safeWeight(v[1]) * safeValue(v[1]) * v[2]
+    local name = safeIngredientName(v)
+    local amount = safeIngredientAmount(v)
+    total = total + safeWeight(name) * safeValue(name) * amount
   end
   return total
 end
