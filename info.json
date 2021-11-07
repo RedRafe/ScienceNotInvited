@@ -6,8 +6,10 @@
   "dependencies": [
       "base >= 1.1.0",
       "? angelsbioprocessing",
+      "? angelsmelting",
       "? bobmodules",
       "? bobtech",
+      "? Krastorio2",
       "? space-exploration-postprocess"
   ],
   "description": "Choose what science packs are needed to research technologies! Tired of all types of science? Want to megabase but not want to deal with all packs? Now it's possible!",

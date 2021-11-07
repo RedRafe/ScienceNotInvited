@@ -36,7 +36,6 @@ end
 -- return any value associated to a key
 -- @ sciencePack: String
 local function safeValue(sciencePack)
-  log(sciencePack)
   sciencePack = safeIngredientName(sciencePack)
   if SNI.values[sciencePack] ~= nil then 
     return SNI.values[sciencePack]
@@ -50,7 +49,6 @@ end
 -- Return any weight associated to a key
 -- @ sciencePack: String
 local function safeWeight(sciencePack)
-  log(sciencePack)
   sciencePack = safeIngredientName(sciencePack)
   if SNI.weights[sciencePack] ~= nil then 
     return SNI.weights[sciencePack]
@@ -90,7 +88,9 @@ local function filterIngredients(ingredients)
     end
   end
   if #filteredIngredients == 0 then
-    table.insert(filteredIngredients, {"automation-science-pack", 1})
+    for k, v in pairs(SNI.defaultPacks) do
+      table.insert(filteredIngredients, {v[1], v[2]})
+    end
   end
   return filteredIngredients
 end
@@ -104,18 +104,21 @@ local function defaultValue(ingredients)
     local amount = safeIngredientAmount(v)
     total = total + safeValue(name) * amount
   end
+  if total == 0 then log("WARNING") end
   return total
 end
 
 -- Compute new value of the technology
 -- @ ingredients: Table<{"ingredient", amount}>
 local function rescaledValue(ingredients)
+  ingredients = filterIngredients(ingredients)
   local total = 0
   for _, v in pairs(ingredients) do
     local name = safeIngredientName(v)
     local amount = safeIngredientAmount(v)
     total = total + safeWeight(name) * safeValue(name) * amount
   end
+  if total == 0 then log("WARNING") end
   return total
 end
 
@@ -219,9 +222,6 @@ local function addInfiniteTechnologyFromLevel(technology, level, max_level)
   local newTech = table.deepcopy(data.raw.technology[technology.name])
   local unit = newTech.unit
 
-  log(technology.max_level)
-  log(newTech.max_level)
-
   unit.count_formula = "9000000000000000"
   newTech.unit = unit
   newTech.visible_when_disabled = false
@@ -295,16 +295,24 @@ function SNI.addDefaultPacks(ingredients)
   end
 end
 
--- Remove all DefaultPacks
+-- DEPRECATED
+--[[
+-- Remove an ingredient in DefaultPacks
 -- @ ingredients: Table<{"ingredient", amount}>
 function SNI.removeDefaultPacks(ingredients)
-  for _, ingredient in pairs(tableIn) do
-    for i, v in pairs(SNI.defaultPacks) do
-      if ingredient[1] == v[1] then
+  if not SNI.DefaultPacks then return end
+  for _, ingredient in pairs(ingredients) do
+    for i, pack in pairs(SNI.defaultPacks) do
+      if pack[1] == ingredient[1] then
         SNI.defaultPacks[i] = nil
       end
     end
   end
+end
+]]
+
+function SNI.removeAllDefaultPacks()
+  SNI.defaultPacks = {}
 end
 
 -- Rescale LuaTechnology.unit
