@@ -105,7 +105,6 @@ local function defaultValue(ingredients)
     total = total + safeValue(name) * amount
   end
   if total == 0 then log("WARNING") end
-  log('Default: ' .. tostring(total))
   return total
 end
 
@@ -120,7 +119,6 @@ local function rescaledValue(ingredients)
     total = total + safeWeight(name) * safeValue(name) * amount
   end
   if total == 0 then log("WARNING") end
-  log('Rescaled: ' .. tostring(total))
   return total
 end
 
@@ -130,7 +128,6 @@ end
 local function coefficient(ingredients, count)
   count = count or 1
   local ratio = defaultValue(ingredients) / rescaledValue(ingredients)
-  log('Coeff: ' .. tostring(safeCount(math.floor(count * ratio + 0.5))))
   return safeCount(math.floor(count * ratio + 0.5))
 end
 
@@ -298,16 +295,21 @@ function SNI.addDefaultPacks(ingredients)
   end
 end
 
+-- DEPRECATED
+--[[
 -- Remove an ingredient in DefaultPacks
 -- @ ingredients: Table<{"ingredient", amount}>
 function SNI.removeDefaultPacks(ingredients)
   if not SNI.DefaultPacks then return end
   for _, ingredient in pairs(ingredients) do
-    if SNI.defaultPacks[ingredient[1]] ~= nil then
-      SNI.defaultPacks[ingredient[1]] = nil
+    for i, pack in pairs(SNI.defaultPacks) do
+      if pack[1] == ingredient[1] then
+        SNI.defaultPacks[i] = nil
+      end
     end
   end
 end
+]]
 
 function SNI.removeAllDefaultPacks()
   SNI.defaultPacks = {}
@@ -318,7 +320,6 @@ end
 function SNI.sendInvite(technology)
 
   local unit = technology.unit
-  log('Techname: ' .. technology.name)
 
   if unit.count ~= nil then
     data.raw.technology[technology.name].unit = {

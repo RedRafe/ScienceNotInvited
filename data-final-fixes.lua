@@ -1,9 +1,9 @@
 sni.stage = "data-final-fixes"
 ---------------------------------------------------------------------------
 
+if (not SNI.defaultPacks) or (#SNI.defaultPacks == 0) then
+  SNI.addDefaultPacks({{"automation-science-pack", 1}})
+end
+
 SNI.sendInvites()
 --SNI.chechIntegrityInfiniteScience()
-
-for k, v in pairs(SNI.values) do
-  log('Pack: ' .. tostring(k) .. ' Value: ' .. tostring(v) .. ' Weight: ' .. tostring(SNI.weights[k]))
-end
