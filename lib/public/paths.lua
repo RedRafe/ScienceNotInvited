@@ -14,6 +14,8 @@ path_p_vanilla_changes                  = path_prototypes .. "vanilla-changes/"
 -- -- COMPATIBILITY SCRIPTS PATHS
 ----------------------------------------------------------------------------------------------
 path_compatibility_scripts              = path_mod .. "compatibility/"
-path_c_space_exploration                = path_compatibility_scripts .. "space-exploration/"
+path_c_angels                           = path_compatibility_scripts .. "Angels/"
 path_c_bobs                             = path_compatibility_scripts .. "Bobs/"
+path_c_bobsangels                       = path_compatibility_scripts .. "BobsAngels/"
 path_c_krastorio2                       = path_compatibility_scripts .. "Krastorio2/"
+path_c_space_exploration                = path_compatibility_scripts .. "space-exploration/"

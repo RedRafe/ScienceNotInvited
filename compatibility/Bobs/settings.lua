@@ -1,5 +1,3 @@
-log('Loading bob settings')
-
 data:extend({
   -- -- Basic science
   {
