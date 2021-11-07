@@ -3,7 +3,6 @@ local Bobs = {}
 local RAW_ALIEN = 10
 
 local function startup(key)
-  log(key)
   return settings.startup[key].value and 1 or 0
 end
 

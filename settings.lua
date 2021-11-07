@@ -68,12 +68,22 @@ data:extend({
 -- -- -- Compatibility settings
 path_compatibility_scripts = "__science-not-invited__/" .. "compatibility/"
 
--- -- Space Exploration
-if mods['space-exploration'] then
-  require(path_compatibility_scripts .. "space-exploration/settings")
+-- -- Angel's
+if mods['angelsbioprocessing'] then
+  require(path_compatibility_scripts .. "Angels/settings")
 end
 
 -- -- Bob's
 if mods['bobmodules'] or mods['bobtech'] then
   require(path_compatibility_scripts .. "Bobs/settings")
+end
+
+-- -- Space Exploration
+if mods['space-exploration'] then
+  require(path_compatibility_scripts .. "space-exploration/settings")
+end
+
+-- -- Krastorio2
+if mods['Krastorio2'] then
+  require(path_compatibility_scripts .. "Krastorio2/settings")
 end
