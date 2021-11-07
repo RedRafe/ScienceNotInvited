@@ -1,6 +1,8 @@
 sni.stage = "data-updates"
 ---------------------------------------------------------------------------
 
+SNI.addDefaultPacks({{"automation-science-pack", 1}})
+
 -- -- Space Exploration
 if mods['space-exploration'] then 
   SpaceExploration = require(path_c_space_exploration .. "data")
@@ -35,4 +37,14 @@ if mods['bobtech'] and mods['angelsrefining'] then
   BobsAngels = require(path_c_bobsangels .. "data")
 
   SNI.setValues(BobsAngels.values)
+end
+
+if mods["Krastorio2"] then
+  Krastorio2 = require(path_c_krastorio2 .. "data")
+
+  SNI.setWeights(Krastorio2.weights)
+  SNI.setValues(Krastorio2.values)
+
+  SNI.removeDefaultPacks({{"automation-science-pack", 1}})
+  SNI.addDefaultPacks({{"basic-tech-card", 1}})
 end

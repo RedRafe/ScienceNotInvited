@@ -82,3 +82,8 @@ end
 if mods['space-exploration'] then
   require(path_compatibility_scripts .. "space-exploration/settings")
 end
+
+-- -- Krastorio2
+if mods['Krastorio2'] then
+  require(path_compatibility_scripts .. "Krastorio2/settings")
+end
