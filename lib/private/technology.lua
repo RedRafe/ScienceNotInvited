@@ -128,7 +128,8 @@ end
 local function coefficient(ingredients, count)
   count = count or 1
   local ratio = defaultValue(ingredients) / rescaledValue(ingredients)
-  return safeCount(math.floor(count * ratio + 0.5))
+  local coeff = safeCount(math.floor(count * ratio + 0.5)) 
+  if coeff == 0 then return 1 else return coeff end
 end
 
 -- Wraps coefficient and previous formula

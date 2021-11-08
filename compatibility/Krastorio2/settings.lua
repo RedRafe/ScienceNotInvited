@@ -1,3 +1,5 @@
+if mods['Krastorio2'] then
+
 data:extend({
   -- -- Basic science
   {
@@ -39,3 +41,5 @@ data:extend({
     order          = "KK-K2-S4"
   }
 })
+
+end
