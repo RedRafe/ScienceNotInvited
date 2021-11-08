@@ -6,6 +6,7 @@ This mod lets you choose which science packs will be needed in order to research
 
 ### Translation
 Available languages:
+
 - English (en)
 
 You can help by translating this mod into your language. Any translations made will be included in the next release.
@@ -14,16 +15,17 @@ You can help by translating this mod into your language. Any translations made w
 Please feel free to report any known issue! :)
 
 Until now, compatibility has been extended to:
+
 - Angel's mod pack
 - Bob's mod pack
-- Darkstar utilities
-- Even distribution
-- Krastorio2
-- Space Exploration
+- [Darkstar utilities](https://mods.factorio.com/mod/Darkstar_utilities)
+- [Even distribution](https://mods.factorio.com/mod/even-distribution)
+- [Krastorio2](https://mods.factorio.com/mod/Krastorio2)
+- [Space Exploration](https://mods.factorio.com/mod/space-exploration)
 
 Science Not Included is developed for vanilla games and should be compatible with all mods that do not introduce changes in the technology tree. Requests for compatibility with overhaul mods can be submitted of course! :)
 
 ### Future developments
-- [] Add compatibility with other big/overhaul mods
-- [] Enable/Disable rescale feature
-- [x] Ideas to disable red science (still mandatory)
+- [ ] Add compatibility with other big/overhaul mods
+- [ ] Enable/Disable rescale feature
+- [ ] Ideas to disable red science (still mandatory)
