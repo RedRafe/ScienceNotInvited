@@ -1,14 +1,13 @@
-if mods['angelsbioprocessing'] then
+if mods['Darkstar_utilities'] then
 
   data:extend({
-    -- -- Basic science
     {
       type           = "bool-setting",
-      name           = "token-bio",
+      name           = "neural-science-pack",
       default_value  = true,
       setting_type   = "startup",
-      order          = "AA-AB-S1"
+      order          = "DD-DA-S1"
     }
   })
-  
+
 end
