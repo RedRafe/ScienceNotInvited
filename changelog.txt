@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 08.11.2021
+  Features:
+    - Added compatibility with Even distribution
+  Bugfixes:
+    - Fixed 0-ingredient technology causing errors
+---------------------------------------------------------------------------------------------------
 Version: 0.1.3
 Date: 07.11.2021
   Features:
