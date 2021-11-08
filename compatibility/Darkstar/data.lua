@@ -1,5 +1,4 @@
-Utils = require(path_public_lib .. "utils")
-local startup = Utils.startup
+local startup = require(path_public_lib .. "utils").startup
 
 local Darkstar = {}
 

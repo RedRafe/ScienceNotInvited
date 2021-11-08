@@ -1,10 +1,8 @@
+local startup = require(path_public_lib .. "utils").startup
+
 local Bobs = {}
 
 local RAW_ALIEN = 10
-
-local function startup(key)
-  return settings.startup[key].value and 1 or 0
-end
 
 local function letTier(value)
   return (value <= settings.startup["module-science-tier"].value) and 1 or 0

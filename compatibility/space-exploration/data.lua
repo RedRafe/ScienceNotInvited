@@ -1,3 +1,5 @@
+local startup = require(path_public_lib .. "utils").startup
+
 local SpaceExploration = {}
 
 SpaceExploration.values = {

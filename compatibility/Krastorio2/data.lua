@@ -1,8 +1,6 @@
-local Krastorio2 = {}
+local startup = require(path_public_lib .. "utils").startup
 
-local function startup(key)
-  return settings.startup[key].value and 1 or 0
-end
+local Krastorio2 = {}
 
 Krastorio2.values = {
   -- Basic science
