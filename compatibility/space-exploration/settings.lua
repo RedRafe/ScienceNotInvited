@@ -1,4 +1,4 @@
---if mods['space-exploration'] then
+if mods['space-exploration'] then
 
   data:extend({
     --- Space Exploration settings
@@ -54,4 +54,4 @@
     }
   })
 
---end
+end

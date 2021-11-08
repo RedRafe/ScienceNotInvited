@@ -1,3 +1,6 @@
+---------------------------------------------------------------------------
+--                          VANILLA SETTINGS                             --
+---------------------------------------------------------------------------
 data:extend({
   --- Vanilla settings
   {
@@ -65,29 +68,24 @@ data:extend({
   }
 })
 
--- -- -- Compatibility settings
-path_compatibility_scripts = "__science-not-invited__/" .. "compatibility/"
+---------------------------------------------------------------------------
+--                       COMPATIBILITY SETTINGS                          --
+---------------------------------------------------------------------------
+local path_compatibility_scripts = "__science-not-invited__/" .. "compatibility/"
 
 -- -- Angel's
-if mods['angelsbioprocessing'] then
-  require(path_compatibility_scripts .. "Angels/settings")
-end
+require(path_compatibility_scripts .. "Angels/settings")
 
 -- -- Bob's
-if mods['bobmodules'] or mods['bobtech'] then
-  require(path_compatibility_scripts .. "Bobs/settings")
-end
+require(path_compatibility_scripts .. "Bobs/settings")
 
--- -- Space Exploration
-if mods['space-exploration'] then
-  require(path_compatibility_scripts .. "space-exploration/settings")
-end
+-- -- Darkstar
+require(path_compatibility_scripts .. "Darkstar/settings")
 
 -- -- Krastorio2
-if mods['Krastorio2'] then
-  require(path_compatibility_scripts .. "Krastorio2/settings")
-end
+require(path_compatibility_scripts .. "Krastorio2/settings")
 
-if mods['Darkstar_utilities'] then
-  require(path_compatibility_scripts .. "Darkstar/settings")
-end
+-- -- Space Exploration
+require(path_compatibility_scripts .. "space-exploration/settings")
+
+---------------------------------------------------------------------------
