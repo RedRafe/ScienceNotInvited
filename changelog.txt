@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: xx.11.2021
+  Features:
+    - Tested compatibility with Bio Industries
+    - Tested compatibility with Quality of Life Research
+    - Tested compatibility with Robot Battery Research
+    - Tested compatibility with Spaceblock
+  Changes:
+    -
+  Bugfixes:
+    - 
+---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 08.11.2021
   Features:

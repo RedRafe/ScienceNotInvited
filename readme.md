@@ -18,10 +18,15 @@ Until now, compatibility has been extended to:
 
 - Angel's mod pack
 - Bob's mod pack
+- [Bio Industries](https://mods.factorio.com/mod/Bio_Industries)
 - [Darkstar utilities](https://mods.factorio.com/mod/Darkstar_utilities)
 - [Even distribution](https://mods.factorio.com/mod/even-distribution)
 - [Krastorio2](https://mods.factorio.com/mod/Krastorio2)
+- [Quality of Life Research](https://mods.factorio.com/mod/qol_research)
+- [Quality of Life Research - Krastorio2](https://mods.factorio.com/mod/qol_research_jatmn)
+- [Robot Battery Research](https://mods.factorio.com/mod/Robot_Battery_Research)
 - [Space Exploration](https://mods.factorio.com/mod/space-exploration)
+- [Spaceblock](https://mods.factorio.com/mod/spaceblock)
 
 Science Not Included is developed for vanilla games and should be compatible with all mods that do not introduce changes in the technology tree. Requests for compatibility with overhaul mods can be submitted of course! :)
 
