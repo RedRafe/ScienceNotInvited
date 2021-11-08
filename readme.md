@@ -16,6 +16,7 @@ Please feel free to report any known issue! :)
 Until now, compatibility has been extended to:
 - Angel's mod pack
 - Bob's mod pack
+- Darkstar utilities
 - Even distribution
 - Krastorio2
 - Space Exploration

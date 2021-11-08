@@ -52,3 +52,10 @@ if mods['bobtech'] and mods['angelsrefining'] then
 
   SNI.setValues(BobsAngels.values)
 end
+
+if mods['Darkstar_utilities'] then
+  Darkstar = require(path_c_darkstar .. "data")
+
+  SNI.setWeights(Darkstar.weights)
+  SNI.setValues(Darkstar.values)
+end

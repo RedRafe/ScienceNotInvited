@@ -49,4 +49,8 @@ function Utils.table_size(tbl)
   return count
 end
 
+function Utils.startup(key)
+  return settings.startup[key].value and 1 or 0
+end
+
 return Utils

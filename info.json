@@ -1,6 +1,6 @@
 {
   "name": "science-not-invited",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "title": "Science Not Invited",
   "author": "RedRafe",
   "dependencies": [
@@ -9,6 +9,7 @@
       "? angelssmelting",
       "? bobmodules",
       "? bobtech",
+      "? Darkstar_utilities",
       "? Krastorio2",
       "? space-exploration-postprocess"
   ],

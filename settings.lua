@@ -87,3 +87,7 @@ end
 if mods['Krastorio2'] then
   require(path_compatibility_scripts .. "Krastorio2/settings")
 end
+
+if mods['Darkstar_utilities'] then
+  require(path_compatibility_scripts .. "Darkstar/settings")
+end
