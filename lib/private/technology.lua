@@ -3,7 +3,7 @@
 ---------------------------------------------------------------------------
 local evaluateExpression = require(path_private_lib .. 'evaluate')
 
-local SNI = {}
+local SNI            = {}
 local DEFAULT_WEIGHT = 1
 local DEFAULT_VALUE  = 100
 local MAX_LEVEL      = 500
@@ -37,11 +37,11 @@ end
 -- @ sciencePack: String
 local function safeValue(sciencePack)
   sciencePack = safeIngredientName(sciencePack)
-  if SNI.values[sciencePack] ~= nil then 
+  if SNI.values[sciencePack] ~= nil then
     return SNI.values[sciencePack]
-  else 
+  else
     log("[Compatibility coverage]: science pack '" .. sciencePack .. "' value not found.")
-    SNI.setValues({[sciencePack] = DEFAULT_VALUE})
+    SNI.setValues({ [sciencePack] = DEFAULT_VALUE })
     return DEFAULT_VALUE
   end
 end
@@ -50,11 +50,11 @@ end
 -- @ sciencePack: String
 local function safeWeight(sciencePack)
   sciencePack = safeIngredientName(sciencePack)
-  if SNI.weights[sciencePack] ~= nil then 
+  if SNI.weights[sciencePack] ~= nil then
     return SNI.weights[sciencePack]
   else
     log("[Compatibility coverage]: science pack '" .. sciencePack .. "' weight not found.")
-    SNI.setWeights({[sciencePack] = DEFAULT_WEIGHT})
+    SNI.setWeights({ [sciencePack] = DEFAULT_WEIGHT })
     return DEFAULT_WEIGHT
   end
 end
@@ -84,12 +84,12 @@ local function filterIngredients(ingredients)
     local name = safeIngredientName(v)
     local amount = safeIngredientAmount(v)
     if safeWeight(name) == 1 then
-      table.insert(filteredIngredients, {name, amount})
+      table.insert(filteredIngredients, { name, amount })
     end
   end
   if #filteredIngredients == 0 then
     for k, v in pairs(SNI.defaultPacks) do
-      table.insert(filteredIngredients, {v[1], v[2]})
+      table.insert(filteredIngredients, { v[1], v[2] })
     end
   end
   return filteredIngredients
@@ -128,7 +128,7 @@ end
 local function coefficient(ingredients, count)
   count = count or 1
   local ratio = defaultValue(ingredients) / rescaledValue(ingredients)
-  local coeff = safeCount(math.floor(count * ratio + 0.5)) 
+  local coeff = safeCount(math.floor(count * ratio + 0.5))
   if coeff == 0 then return 1 else return coeff end
 end
 
@@ -137,8 +137,9 @@ end
 -- @ countFormula: String
 local function wrapFormula(ingredients, countFormula)
   local coeff = coefficient(ingredients)
+  ---@diagnostic disable-next-line: deprecated
   local exp = string.format("%.3f", math.log10(coeff))
-  return "10^" .. exp .. "*(" .. countFormula .. ")"  
+  return "10^" .. exp .. "*(" .. countFormula .. ")"
 end
 
 -- Whether a Prototype/Technology has a count_formula or not
@@ -151,11 +152,11 @@ end
 -- Returns max_level of a Prototype/Technology or MAX_LEVEL
 -- @ technology: Prototype/Technology
 local function hasMaxLevel(technology)
-  if technology.max_level == "infinite" then 
-    return MAX_LEVEL 
+  if technology.max_level == "infinite" then
+    return MAX_LEVEL
   elseif tonumber(technology.max_level) ~= nil then
     return tonumber(technology.max_level)
-  else 
+  else
     log("WARNING: " .. technology.name)
     return -1
   end
@@ -180,10 +181,10 @@ local function binarySearchMaxLevel(technology)
   local start = 1
   local level = 1
 
-  while(start <= stop) do
+  while (start <= stop) do
     level = math.floor((start + stop) * 0.5)
 
-    if(evaluateExpression(formula, level) >= MAX_INT64) then
+    if (evaluateExpression(formula, level) >= MAX_INT64) then
       stop = level - 1
     else
       start = level + 1
@@ -212,7 +213,7 @@ local function getRootName(name, level)
       i = i - 1
     end
     local base = string.sub(name, 1, i)
-    local level = tonumber(string.sub(name, i+1, #name)) + 1
+    local level = tonumber(string.sub(name, i + 1, #name)) + 1
     return base
   end
 end
@@ -226,11 +227,11 @@ local function addInfiniteTechnologyFromLevel(technology, level, max_level)
   unit.count_formula = "9000000000000000"
   newTech.unit = unit
   newTech.visible_when_disabled = false
-  if max_level ~= nil then 
-    newTech.max_level = max_level 
+  if max_level ~= nil then
+    newTech.max_level = max_level
   end
   newTech.name = getRootName(newTech.name, level) .. tostring(level)
-  newTech.prerequisites = {getRootName(technology.name, level) .. tostring(1)}
+  newTech.prerequisites = { getRootName(technology.name, level) .. tostring(1) }
 
   data:extend({ newTech })
 end
@@ -292,7 +293,7 @@ function SNI.addDefaultPacks(ingredients)
     SNI.defaultPacks = {}
   end
   for _, v in pairs(ingredients) do
-    table.insert(SNI.defaultPacks, {v[1], v[2]})
+    table.insert(SNI.defaultPacks, { v[1], v[2] })
   end
 end
 
@@ -337,10 +338,10 @@ function SNI.sendInvite(technology)
       time = unit.time
     }
   end
-  
+
 end
 
--- Apply adjusted technologies 
+-- Apply adjusted technologies
 function SNI.sendInvites()
   for _, tech in pairs(data.raw.technology) do
     SNI.sendInvite(tech)
