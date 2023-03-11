@@ -1,15 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.6
-Date: xx.11.2021
+Date: 11.03.2023
   Features:
     - Tested compatibility with Bio Industries
     - Tested compatibility with Quality of Life Research
     - Tested compatibility with Robot Battery Research
     - Tested compatibility with Spaceblock
   Changes:
-    -
-  Bugfixes:
-    - 
+    - Added item icons to settings names
+    - Added options to allow empty research costs
+    - Any/All techs can now be disabled
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 08.11.2021
