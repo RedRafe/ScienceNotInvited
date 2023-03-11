@@ -119,8 +119,8 @@ local function rescaledValue(ingredients)
     local amount = safeIngredientAmount(v)
     total = total + safeWeight(name) * safeValue(name) * amount
   end
-  if total == 0 then log("WARNING") end
-  return 1 --0
+  --if total == 0 then log("WARNING") end
+  return total
 end
 
 -- Compute coefficient based on count * ratio
@@ -128,7 +128,9 @@ end
 -- @ count: Number
 local function coefficient(ingredients, count)
   count = count or 1
-  local ratio = defaultValue(ingredients) / rescaledValue(ingredients)
+  local rescaled = rescaledValue(ingredients)
+  if rescaled == 0 then return count end -- empty item
+  local ratio = defaultValue(ingredients) / rescaled
   local coeff = safeCount(math.floor(count * ratio + 0.5))
   if coeff == 0 then return 1 else return coeff end
 end
