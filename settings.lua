@@ -10,7 +10,7 @@ data:extend({
     default_value = true,
     forced_value  = true,
     setting_type  = "startup",
-    order         = "AA-AA-S1"
+    order         = "AA-AA-S1",
   },
   {
     type          = "bool-setting",
@@ -19,7 +19,7 @@ data:extend({
     default_value = true,
     forced_value  = true,
     setting_type  = "startup",
-    order         = "AA-AA-S2"
+    order         = "AA-AA-S2",
   },
   {
     type          = "bool-setting",
@@ -28,7 +28,7 @@ data:extend({
     default_value = true,
     forced_value  = true,
     setting_type  = "startup",
-    order         = "AA-AA-S3"
+    order         = "AA-AA-S3",
   },
   {
     type          = "bool-setting",
@@ -37,7 +37,7 @@ data:extend({
     default_value = true,
     forced_value  = true,
     setting_type  = "startup",
-    order         = "AA-AA-S4"
+    order         = "AA-AA-S4",
   },
   {
     type          = "bool-setting",
@@ -46,7 +46,7 @@ data:extend({
     default_value = true,
     forced_value  = true,
     setting_type  = "startup",
-    order         = "AA-AA-S5"
+    order         = "AA-AA-S5",
   },
   {
     type          = "bool-setting",
@@ -55,7 +55,7 @@ data:extend({
     default_value = true,
     forced_value  = true,
     setting_type  = "startup",
-    order         = "AA-AA-S6"
+    order         = "AA-AA-S6",
   },
   {
     type          = "bool-setting",
@@ -64,7 +64,8 @@ data:extend({
     default_value = true,
     forced_value  = true,
     setting_type  = "startup",
-    order         = "AA-AA-S7"
+    order         = "AA-AA-S7",
+    --localised_name = { "Include ", "[item=space-science-pack] ", { "item-name.space-science-pack" } }
   }
 })
 
