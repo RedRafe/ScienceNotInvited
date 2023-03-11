@@ -14,7 +14,7 @@ data:extend({
     type           = "bool-setting",
     name           = "basic-tech-card",
     default_value  = true,
-    hidden         = true,
+    hidden         = false,
     forced_value   = true,
     setting_type   = "startup",
     order          = "KK-K2-S1"

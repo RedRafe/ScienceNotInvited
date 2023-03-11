@@ -13,7 +13,7 @@ data:extend({
   {
     type          = "bool-setting",
     name          = "automation-science-pack", -- Red Science, must be enabled
-    hidden        = true,
+    hidden        = false,
     default_value = true,
     forced_value  = true,
     setting_type  = "startup",
