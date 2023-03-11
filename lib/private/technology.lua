@@ -88,6 +88,7 @@ local function filterIngredients(ingredients)
     end
   end
   if #filteredIngredients == 0 then
+    if settings.startup["allow-empty-tech-cost"].value == true then return {} end
     for k, v in pairs(SNI.defaultPacks) do
       table.insert(filteredIngredients, { v[1], v[2] })
     end
@@ -119,7 +120,7 @@ local function rescaledValue(ingredients)
     total = total + safeWeight(name) * safeValue(name) * amount
   end
   if total == 0 then log("WARNING") end
-  return total
+  return 1 --0
 end
 
 -- Compute coefficient based on count * ratio

@@ -5,6 +5,13 @@ data:extend({
   --- Vanilla settings
   {
     type          = "bool-setting",
+    name          = "allow-empty-tech-cost", -- Allow empty costs
+    default_value = false,
+    setting_type  = "startup",
+    order         = "AA-AA-S0",
+  },
+  {
+    type          = "bool-setting",
     name          = "automation-science-pack", -- Red Science, must be enabled
     hidden        = true,
     default_value = true,
