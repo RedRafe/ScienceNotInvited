@@ -19,8 +19,6 @@ Krastorio2.values = {
 }
 
 Krastorio2.weights = {
-  -- Basic science
-  ["automation-science-pack"] = startup("k2-automation-science-pack"),
   -- Krastorio extended science packs
   ["basic-tech-card"]         = startup("basic-tech-card"),
   ["matter-tech-card"]        = startup("matter-tech-card"),
