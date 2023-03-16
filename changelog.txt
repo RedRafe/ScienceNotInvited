@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 16.03.2023
+  Changes:
+    - Improved compatibility with K2SE:
+      - Added "Matter Science Pack 2" setting
+      - Added "Optimization Tech Card" setting
+    - Rimoved double automation setting from K2
+    - Added more icons to the settings menu
+    - Re-ordered settings for better reading
+---------------------------------------------------------------------------------------------------
 Version: 0.1.6
 Date: 11.03.2023
   Features:
