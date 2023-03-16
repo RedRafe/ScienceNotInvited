@@ -7,7 +7,7 @@ data:extend({
     name           = "basic-tech-card",
     default_value  = true,
     setting_type   = "startup",
-    order          = "KK-K2-S1"
+    order          = "AA-AA-K1"
   },
   {
     type           = "bool-setting",

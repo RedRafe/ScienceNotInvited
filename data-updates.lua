@@ -27,6 +27,7 @@ end
 if mods["Krastorio2"] and mods['space-exploration'] then 
   local K2SE = require(path_c_k2se .. "data")
 
+  SNI.setWeights(K2SE.weights)
   SNI.setValues(K2SE.values)
 end
 

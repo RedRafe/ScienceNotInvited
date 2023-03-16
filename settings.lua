@@ -8,11 +8,11 @@ data:extend({
     name          = "allow-empty-tech-cost", -- Allow empty costs
     default_value = false,
     setting_type  = "startup",
-    order         = "AA-AA-S0",
+    order         = "00-00-00",
   },
   {
     type          = "bool-setting",
-    name          = "automation-science-pack", -- Red Science, must be enabled
+    name          = "automation-science-pack", -- Red Science
     hidden        = false,
     default_value = true,
     forced_value  = true,
@@ -72,7 +72,6 @@ data:extend({
     forced_value  = true,
     setting_type  = "startup",
     order         = "AA-AA-S7",
-    --localised_name = { "Include ", "[item=space-science-pack] ", { "item-name.space-science-pack" } }
   }
 })
 
@@ -95,5 +94,8 @@ require(path_compatibility_scripts .. "Krastorio2/settings")
 
 -- -- Space Exploration
 require(path_compatibility_scripts .. "space-exploration/settings")
+
+-- -- K2+SE
+require(path_compatibility_scripts .. "K2SE/settings")
 
 ---------------------------------------------------------------------------
