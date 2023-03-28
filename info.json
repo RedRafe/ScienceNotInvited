@@ -1,6 +1,6 @@
 {
   "name": "science-not-invited",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "title": "Science Not Invited",
   "homepage": "https://mods.factorio.com/mod/science-not-invited",
   "source": "https://github.com/RedRafe/ScienceNotInvited",
@@ -12,6 +12,7 @@
     "(?) bobmodules",
     "(?) bobtech",
     "(?) Darkstar_utilities",
+    "(?) exotic-industries",
     "(?) Krastorio2",
     "(?) space-exploration-postprocess"
   ],
