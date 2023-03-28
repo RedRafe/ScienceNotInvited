@@ -4,7 +4,7 @@ Choose which science packs will be needed to research technologies. The cost of 
 ### Main features
 This mod lets you choose which science packs will be needed in order to research technologies. By default all vanilla science packs are included, but you can choose to opt out any of them in the setting menu. The tech tree order will not be modified and you'll still need to research other science packs in order to progress, even if the science packs are disabled for cost computations. You may even craft other science packs, but if the're disabled in the mod settings they will not be consumed in the laboratories as they wont be needed. 
 
-The cost of science packs not used will be evenly distributed among the remaining one(s). You can also choose to have empty tech costs in the mod settings. Other game mechanics remain untouched. This mods opens new ways of designing your base, wether you'd like to build a mega base and research infinite tech without the need to build all the science (e.g. only Red science, or nly RGB, or no Military science,no Space science) or complete giant overhaul mod packs skipping some science packs (e.g. Space Exploration, Krastorio2, B&A).
+The cost of science packs not used will be evenly distributed among the remaining one(s). You can also choose to have empty tech costs in the mod settings. Other game mechanics remain untouched. This mods opens new ways of designing your base, wether you'd like to build a mega base and research infinite tech without the need to build all the science (e.g. only Red science, or nly RGB, or no Military science,no Space science) or complete giant overhaul mod packs skipping some science packs (e.g. Space Exploration, Krastorio2, B&A, EI).
 
 ### Translation
 Available languages:
@@ -23,6 +23,7 @@ Until now, compatibility has been extended to:
 - [Bio Industries](https://mods.factorio.com/mod/Bio_Industries)
 - [Darkstar utilities](https://mods.factorio.com/mod/Darkstar_utilities)
 - [Even distribution](https://mods.factorio.com/mod/even-distribution)
+- [Exotic Industries](https://mods.factorio.com/mod/exotic-industries)
 - [Krastorio2](https://mods.factorio.com/mod/Krastorio2)
 - [Quality of Life Research](https://mods.factorio.com/mod/qol_research)
 - [Quality of Life Research - Krastorio2](https://mods.factorio.com/mod/qol_research_jatmn)

@@ -21,3 +21,4 @@ path_c_darkstar                         = path_compatibility_scripts .. "Darksta
 path_c_krastorio2                       = path_compatibility_scripts .. "Krastorio2/"
 path_c_space_exploration                = path_compatibility_scripts .. "space-exploration/"
 path_c_k2se                             = path_compatibility_scripts .. "K2SE/"
+path_c_ei                               = path_compatibility_scripts .. "exotic-industries/"

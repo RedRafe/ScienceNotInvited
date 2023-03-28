@@ -61,3 +61,13 @@ if mods['Darkstar_utilities'] then
   SNI.setWeights(Darkstar.weights)
   SNI.setValues(Darkstar.values)
 end
+
+if mods['exotic-industries'] then
+  local EI = require(path_c_ei .. "data")
+
+  SNI.setWeights(EI.weights)
+  SNI.setValues(EI.values)
+
+  SNI.removeAllDefaultPacks()
+  SNI.addDefaultPacks({{"ei_dark-age-tech", 1}})
+end

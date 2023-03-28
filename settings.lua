@@ -98,4 +98,6 @@ require(path_compatibility_scripts .. "space-exploration/settings")
 -- -- K2+SE
 require(path_compatibility_scripts .. "K2SE/settings")
 
+-- -- Exotic Industries
+require(path_compatibility_scripts .. "exotic-industries/settings")
 ---------------------------------------------------------------------------
