@@ -325,6 +325,9 @@ end
 function SNI.sendInvite(technology)
 
   local unit = technology.unit
+  if not unit then
+    return
+  end
 
   if unit.count ~= nil then
     data.raw.technology[technology.name].unit = {

@@ -3,6 +3,13 @@ sni.stage = "data-updates"
 
 SNI.addDefaultPacks({{"automation-science-pack", 1}})
 
+if mods['space-age'] then
+  local SA = require(path_c_space_age .. "data")
+
+  SNI.setWeights(SA.weights)
+  SNI.setValues(SA.values)
+end
+
 -- -- Space Exploration
 if mods['space-exploration'] then 
   local SpaceExploration = require(path_c_space_exploration .. "data")

@@ -18,7 +18,9 @@ for key, _ in pairs(values) do
   weights[key] = settings.startup[key].value and 1 or 0
 end
 
-data.raw.technology["follower-robot-count-7"].unit.count_formula = "100*(L-6)+900"
+if data.raw.technology["follower-robot-count-7"] then
+  data.raw.technology["follower-robot-count-7"].unit.count_formula = "100*(L-6)+900"
+end
 
 SNI.setWeights(weights)
 SNI.setValues(values)
