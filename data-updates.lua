@@ -78,3 +78,14 @@ if mods['exotic-industries'] then
   SNI.removeAllDefaultPacks()
   SNI.addDefaultPacks({{"ei_dark-age-tech", 1}})
 end
+
+-- -- StarsWithSakura
+if mods["StarsWithSakura"] then
+  local Sakura = require(path_c_sakura .. "data")
+
+  SNI.setWeights(Sakura.weights)
+  SNI.setValues(Sakura.values)
+
+  SNI.removeAllDefaultPacks()
+  SNI.addDefaultPacks({{"inspiration", 1}})
+end

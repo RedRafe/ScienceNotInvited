@@ -95,6 +95,9 @@ require(path_compatibility_scripts .. "Darkstar/settings")
 -- -- Krastorio2
 require(path_compatibility_scripts .. "Krastorio2/settings")
 
+-- -- StarsWithSakura
+require(path_compatibility_scripts .. "StarsWithSakura/settings")
+
 -- -- Space Exploration
 require(path_compatibility_scripts .. "space-exploration/settings")
 

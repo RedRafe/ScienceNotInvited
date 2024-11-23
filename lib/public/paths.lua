@@ -23,3 +23,4 @@ path_c_space_age                        = path_compatibility_scripts .. "space-a
 path_c_space_exploration                = path_compatibility_scripts .. "space-exploration/"
 path_c_k2se                             = path_compatibility_scripts .. "K2SE/"
 path_c_ei                               = path_compatibility_scripts .. "exotic-industries/"
+path_c_sakura                           = path_compatibility_scripts .. "StarsWithSakura/"

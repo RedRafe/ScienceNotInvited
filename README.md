@@ -30,6 +30,7 @@ Until now, compatibility has been extended to:
 - [Robot Battery Research](https://mods.factorio.com/mod/Robot_Battery_Research)
 - [Space Exploration](https://mods.factorio.com/mod/space-exploration)
 - [Spaceblock](https://mods.factorio.com/mod/spaceblock)
+- [Stars with Sakura](https://mods.factorio.com/mod/StarsWithSakura)
 
 Science Not Included is developed for vanilla games and should be compatible with all mods that do not introduce changes in the technology tree. Requests for compatibility with overhaul mods can be submitted of course! :)
 
