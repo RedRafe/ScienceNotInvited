@@ -12,6 +12,13 @@ data:extend({
   },
   {
     type          = "bool-setting",
+    name          = "flat-remove", -- Just remove ingredients without redistributing the cost 
+    default_value = false,
+    setting_type  = "startup",
+    order         = "00-01-00",
+  },
+  {
+    type          = "bool-setting",
     name          = "automation-science-pack", -- Red Science
     hidden        = false,
     default_value = true,

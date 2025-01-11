@@ -6,4 +6,4 @@ if (not SNI.defaultPacks) or (#SNI.defaultPacks == 0) then
 end
 
 SNI.sendInvites()
---SNI.chechIntegrityInfiniteScience()
+--SNI.checkIntegrityInfiniteScience()

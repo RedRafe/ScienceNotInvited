@@ -128,6 +128,9 @@ end
 -- @ count: Number
 local function coefficient(ingredients, count)
   count = count or 1
+  if settings.startup["flat-remove"].value then
+    return count
+  end
   local rescaled = rescaledValue(ingredients)
   if rescaled == 0 then return count end -- empty item
   local ratio = defaultValue(ingredients) / rescaled
@@ -355,7 +358,7 @@ function SNI.sendInvites()
 end
 
 -- Check integrity for infinite tech
-function SNI.chechIntegrityInfiniteScience()
+function SNI.checkIntegrityInfiniteScience()
   for _, tech in pairs(data.raw.technology) do
     -- check if has formula
     if hasFormula(tech) then
